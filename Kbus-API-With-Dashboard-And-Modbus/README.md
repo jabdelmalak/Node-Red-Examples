@@ -51,4 +51,9 @@ For this application, we'll need the modbus and Dashboard palettes. These can be
 
 ![image](https://user-images.githubusercontent.com/42245728/226684109-c682bddb-5bb1-4d97-ac86-2b1565a04b7b.png)
 
-Import the .JSON Program from 
+Import the .JSON Program from the following link:
+https://github.com/jabdelmalak/Node-Red-Examples/blob/main/Kbus-API-With-Dashboard-And-Modbus/Node-red-Kbus-API-with-Dashboard-And-Modbus.json
+
+# Changes to the Program
+
+The Node-Red program consists of several flows. 

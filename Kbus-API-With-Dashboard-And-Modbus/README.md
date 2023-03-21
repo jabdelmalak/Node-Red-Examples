@@ -37,9 +37,18 @@ Once we've confirmed that containers are healthy, we can import our node red cod
 
 Ex: 192.168.1.10:1880
 
+# Install Node Red Palettes
+For this application, we'll need the modbus and Dashboard palettes. These can be installed via the Node Red palette manager 
+![image](https://user-images.githubusercontent.com/42245728/226686627-73aff31a-a25d-4663-b1c4-686e9c256f0c.png)
+
+![image](https://user-images.githubusercontent.com/42245728/226686501-8a24dfff-23f7-4c2b-8100-afb46c708491.png)
+![image](https://user-images.githubusercontent.com/42245728/226686872-5d286c7d-c322-43c6-bc90-b09187f58393.png)
+
+
 # Import Node-Red Code
 
 ![image](https://user-images.githubusercontent.com/42245728/226682888-9f534224-bc77-4359-bba4-53f67d8dd31c.png)
 
 ![image](https://user-images.githubusercontent.com/42245728/226684109-c682bddb-5bb1-4d97-ac86-2b1565a04b7b.png)
 
+Import the .JSON Program from 

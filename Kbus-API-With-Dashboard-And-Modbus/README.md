@@ -1,5 +1,5 @@
 # Node-Red-Examples
-This application uses three main Docker images: Node-Red, Wago MQTT KBUS API, and Eclipse MQTT broker
+This application uses three main Docker images: Node-Red, Wago MQTT KBUS API, and Eclipse MQTT broker. It's also important to note that you must have the select runtime as NONE on the web-based management page of the controller for the API to run. Additionally, ensure the PFC switch is set to RUN.
 
 
 # Docker Run commands
@@ -44,9 +44,12 @@ Ex: 192.168.1.10:1880
 For this application, we'll need the modbus and Dashboard palettes. These can be installed via the Node Red palette manager 
 ![image](https://user-images.githubusercontent.com/42245728/226686627-73aff31a-a25d-4663-b1c4-686e9c256f0c.png)
 
+
 ![image](https://user-images.githubusercontent.com/42245728/226686501-8a24dfff-23f7-4c2b-8100-afb46c708491.png)
 ![image](https://user-images.githubusercontent.com/42245728/226686872-5d286c7d-c322-43c6-bc90-b09187f58393.png)
-![image](https://user-images.githubusercontent.com/42245728/228615885-1202c7a7-0140-40df-9cb1-e76b3169813f.png)
+
+
+![image](https://user-images.githubusercontent.com/42245728/228616364-b4490df3-57f4-4f11-b335-93b333165702.png)
 
 
 

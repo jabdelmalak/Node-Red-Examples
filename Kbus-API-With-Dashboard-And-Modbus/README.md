@@ -11,7 +11,8 @@ docker run --restart unless-stopped -d -p 1880:1880 --name node-red \
 ```
 Wago MQTT KBUS API Run command:
 ```
-docker run -d --init --restart unless-stopped --privileged --network=host -v kbusapidata:/etc/kbus-api -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket \jessejamescox/pfc-kbus-api
+docker run -d --init --restart unless-stopped --privileged --network=host -v kbusapidata:/etc/kbus-api \
+-v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket \jessejamescox/pfc-kbus-api
 ```
 Eclipse MQTT Broker Run command:
 ```

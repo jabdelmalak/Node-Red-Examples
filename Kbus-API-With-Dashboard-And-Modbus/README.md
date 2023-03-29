@@ -46,6 +46,8 @@ For this application, we'll need the modbus and Dashboard palettes. These can be
 
 ![image](https://user-images.githubusercontent.com/42245728/226686501-8a24dfff-23f7-4c2b-8100-afb46c708491.png)
 ![image](https://user-images.githubusercontent.com/42245728/226686872-5d286c7d-c322-43c6-bc90-b09187f58393.png)
+![image](https://user-images.githubusercontent.com/42245728/228615885-1202c7a7-0140-40df-9cb1-e76b3169813f.png)
+
 
 
 # Import Node-Red Code

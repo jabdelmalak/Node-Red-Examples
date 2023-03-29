@@ -5,7 +5,9 @@ This application uses three main Docker images: Node-Red, Wago MQTT KBUS API, an
 # Docker Run commands
 Node-Red Run command:
 ```
-docker run -d  --restart unless-stopped --network=host  -v node_red_data:/data --name mynodered nodered/node-red
+docker run --restart unless-stopped -d -p 1880:1880 --name node-red \
+--security-opt seccomp:unconfined \
+-v node_red_user_data:/data nodered/node-red
 ```
 Wago MQTT KBUS API Run command:
 ```

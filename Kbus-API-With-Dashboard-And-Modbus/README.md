@@ -16,7 +16,7 @@ docker run -d --init --restart unless-stopped --privileged --network=host -v kbu
 ```
 Eclipse MQTT Broker Run command:
 ```
-docker run -d --network=host --restart=unless-stopped  -v /home/docker/volumes/mosquitto/config/mosquitto.conf  eclipse-mosquitto:1.5
+docker run -d --network=host --restart=unless-stopped -v /home/docker/volumes/mosquitto/config/mosquitto.conf  eclipse-mosquitto:1.5
 ```
 
 Change KBUS API config settings:

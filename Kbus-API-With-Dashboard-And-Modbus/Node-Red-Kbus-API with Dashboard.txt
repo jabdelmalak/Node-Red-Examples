@@ -1,0 +1,3552 @@
+[
+    {
+        "id": "0bdc3439685e9e46",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "0a641bc694c2d3c7",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c0df73d9d755c19f",
+        "type": "subflow",
+        "name": "Digital_Ins",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 460,
+                "wires": [
+                    {
+                        "id": "9c5371ae871c1ccc"
+                    },
+                    {
+                        "id": "dd581db679c606be"
+                    },
+                    {
+                        "id": "aaf39e087dcd025e"
+                    },
+                    {
+                        "id": "d83f3d243275beef"
+                    },
+                    {
+                        "id": "d2b79fc9433856df"
+                    },
+                    {
+                        "id": "ec98ed9fbb900d08"
+                    },
+                    {
+                        "id": "a5ca272a18bcadde"
+                    },
+                    {
+                        "id": "767181b5b27a458e"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 580,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "767181b5b27a458e",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "a5ca272a18bcadde",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "ec98ed9fbb900d08",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "d2b79fc9433856df",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 400,
+                "wires": [
+                    {
+                        "id": "d83f3d243275beef",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 460,
+                "wires": [
+                    {
+                        "id": "aaf39e087dcd025e",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 520,
+                "wires": [
+                    {
+                        "id": "dd581db679c606be",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 580,
+                "wires": [
+                    {
+                        "id": "9c5371ae871c1ccc",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 1040,
+            "y": 200,
+            "wires": []
+        }
+    },
+    {
+        "id": "69d27fb55e93041c",
+        "type": "subflow",
+        "name": "Digital_Outputs",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "9ab2b3379868544a"
+                    },
+                    {
+                        "id": "a653091c3b0a6425"
+                    },
+                    {
+                        "id": "3834fee1d65a7ced"
+                    },
+                    {
+                        "id": "b2ee0baa344d8efc"
+                    },
+                    {
+                        "id": "a5acc13776a7ea61"
+                    },
+                    {
+                        "id": "06c0a9d4ddb20eb4"
+                    },
+                    {
+                        "id": "d1de91c36ceebe42"
+                    },
+                    {
+                        "id": "c1e6356302b699ce"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 780,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "cc36ef4376299de8",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 780,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "b286ca2485076c32",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 780,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "e5b08bc9004b6671",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 780,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "2fb219f3c197fb30",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 780,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "7361bd4062bb3670",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 780,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "05aa9e6c48c8e582",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 780,
+                "y": 440,
+                "wires": [
+                    {
+                        "id": "b31c2e68103b36fb",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 780,
+                "y": 500,
+                "wires": [
+                    {
+                        "id": "f193db5e74a5154d",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "4131f795a91fa6ca",
+        "type": "subflow",
+        "name": "Analog_Inputs",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "3f400504b53483cc"
+                    },
+                    {
+                        "id": "5ee0af043f1598e2"
+                    },
+                    {
+                        "id": "3c10b541a4583be3"
+                    },
+                    {
+                        "id": "0f7ad6be3ae33751"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 540,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "3f400504b53483cc",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 520,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "5ee0af043f1598e2",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 520,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "3c10b541a4583be3",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 520,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "0f7ad6be3ae33751",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "6e05f0b4bf4b50bb",
+        "type": "subflow",
+        "name": "JSON_PARSE_VAL",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "58e3abde654b5846"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1300,
+                "y": 500,
+                "wires": [
+                    {
+                        "id": "9f0fb5e4965a09a3",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 1280,
+            "y": 340,
+            "wires": [
+                {
+                    "id": "9f0fb5e4965a09a3",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "8dbb6511f0ee6499",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.35",
+        "port": "1883",
+        "tls": "b9968d6da747a37e",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ed7a3f35ab814cf5",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.35",
+        "port": "8883",
+        "tls": "b9968d6da747a37e",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "0f06d2343443af5e",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a9e20cec04ea8cdf",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "892c1744976d6970",
+        "type": "ui_group",
+        "name": "Analog_inputs",
+        "tab": "0f06d2343443af5e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "d1c4f2005d30847e",
+        "type": "ui_group",
+        "name": "Digital Inputs",
+        "tab": "0f06d2343443af5e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "8782250ab038ca44",
+        "type": "ui_group",
+        "name": "Digital Outputs",
+        "tab": "0f06d2343443af5e",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "1eee0f10864bf93f",
+        "type": "ui_group",
+        "name": "Force Outputs",
+        "tab": "0f06d2343443af5e",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b9968d6da747a37e",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "767181b5b27a458e",
+        "type": "digital input",
+        "z": "c0df73d9d755c19f",
+        "module": "1",
+        "channel": "1",
+        "name": "",
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "2fa695c9c882ecea"
+            ]
+        ]
+    },
+    {
+        "id": "a5ca272a18bcadde",
+        "type": "digital input",
+        "z": "c0df73d9d755c19f",
+        "module": "1",
+        "channel": "2",
+        "name": "",
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "c5f957da4095e1cb"
+            ]
+        ]
+    },
+    {
+        "id": "ec98ed9fbb900d08",
+        "type": "digital input",
+        "z": "c0df73d9d755c19f",
+        "module": "1",
+        "channel": "3",
+        "name": "",
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "62c3cca2aa328ade"
+            ]
+        ]
+    },
+    {
+        "id": "d2b79fc9433856df",
+        "type": "digital input",
+        "z": "c0df73d9d755c19f",
+        "module": "1",
+        "channel": "4",
+        "name": "",
+        "x": 450,
+        "y": 400,
+        "wires": [
+            [
+                "71d55cd677ad866e"
+            ]
+        ]
+    },
+    {
+        "id": "d83f3d243275beef",
+        "type": "digital input",
+        "z": "c0df73d9d755c19f",
+        "module": "1",
+        "channel": "5",
+        "name": "",
+        "x": 450,
+        "y": 460,
+        "wires": [
+            [
+                "ddb699b476e97ad9"
+            ]
+        ]
+    },
+    {
+        "id": "aaf39e087dcd025e",
+        "type": "digital input",
+        "z": "c0df73d9d755c19f",
+        "module": "1",
+        "channel": "6",
+        "name": "",
+        "x": 450,
+        "y": 520,
+        "wires": [
+            [
+                "a93f766442690259"
+            ]
+        ]
+    },
+    {
+        "id": "dd581db679c606be",
+        "type": "digital input",
+        "z": "c0df73d9d755c19f",
+        "module": "1",
+        "channel": "7",
+        "name": "",
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "6f70c01941795ea6"
+            ]
+        ]
+    },
+    {
+        "id": "9c5371ae871c1ccc",
+        "type": "digital input",
+        "z": "c0df73d9d755c19f",
+        "module": "1",
+        "channel": "8",
+        "name": "",
+        "x": 450,
+        "y": 640,
+        "wires": [
+            [
+                "e3d3105139128bf3"
+            ]
+        ]
+    },
+    {
+        "id": "2fa695c9c882ecea",
+        "type": "function",
+        "z": "c0df73d9d755c19f",
+        "name": "",
+        "func": "global.set(\"controls.digitalIn.SetPoint_Alarm_1\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5f957da4095e1cb",
+        "type": "function",
+        "z": "c0df73d9d755c19f",
+        "name": "",
+        "func": "global.set(\"controls.digitalIn.SetPoint_Alarm_2\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62c3cca2aa328ade",
+        "type": "function",
+        "z": "c0df73d9d755c19f",
+        "name": "",
+        "func": "global.set(\"controls.digitalIn.SetPoint_Alarm_3\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71d55cd677ad866e",
+        "type": "function",
+        "z": "c0df73d9d755c19f",
+        "name": "",
+        "func": "global.set(\"controls.digitalIn.SetPoint_Alarm_4\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddb699b476e97ad9",
+        "type": "function",
+        "z": "c0df73d9d755c19f",
+        "name": "",
+        "func": "global.set(\"controls.digitalIn.SetPoint_Alarm_5\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a93f766442690259",
+        "type": "function",
+        "z": "c0df73d9d755c19f",
+        "name": "",
+        "func": "global.set(\"controls.digitalIn.SetPoint_Alarm_6\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f70c01941795ea6",
+        "type": "function",
+        "z": "c0df73d9d755c19f",
+        "name": "",
+        "func": "global.set(\"controls.digitalIn.SetPoint_Alarm_7\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3d3105139128bf3",
+        "type": "function",
+        "z": "c0df73d9d755c19f",
+        "name": "",
+        "func": "global.set(\"controls.digitalIn.SetPoint_Alarm_8\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc36ef4376299de8",
+        "type": "digital output",
+        "z": "69d27fb55e93041c",
+        "module": "1",
+        "channel": "1",
+        "name": "",
+        "x": 550,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ab2b3379868544a",
+        "type": "function",
+        "z": "69d27fb55e93041c",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalIn.SetPoint_Alarm_1\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 80,
+        "wires": [
+            [
+                "cc36ef4376299de8"
+            ]
+        ]
+    },
+    {
+        "id": "b286ca2485076c32",
+        "type": "digital output",
+        "z": "69d27fb55e93041c",
+        "module": "1",
+        "channel": "1",
+        "name": "",
+        "x": 550,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a653091c3b0a6425",
+        "type": "function",
+        "z": "69d27fb55e93041c",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalIn.SetPoint_Alarm_2\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "b286ca2485076c32"
+            ]
+        ]
+    },
+    {
+        "id": "2fb219f3c197fb30",
+        "type": "digital output",
+        "z": "69d27fb55e93041c",
+        "module": "1",
+        "channel": "4",
+        "name": "",
+        "x": 550,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e5b08bc9004b6671",
+        "type": "digital output",
+        "z": "69d27fb55e93041c",
+        "module": "1",
+        "channel": "3",
+        "name": "",
+        "x": 550,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3834fee1d65a7ced",
+        "type": "function",
+        "z": "69d27fb55e93041c",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalIn.SetPoint_Alarm_3\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 200,
+        "wires": [
+            [
+                "e5b08bc9004b6671"
+            ]
+        ]
+    },
+    {
+        "id": "b2ee0baa344d8efc",
+        "type": "function",
+        "z": "69d27fb55e93041c",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalIn.SetPoint_Alarm_4\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "2fb219f3c197fb30"
+            ]
+        ]
+    },
+    {
+        "id": "7361bd4062bb3670",
+        "type": "digital output",
+        "z": "69d27fb55e93041c",
+        "module": "1",
+        "channel": "5",
+        "name": "",
+        "x": 550,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5acc13776a7ea61",
+        "type": "function",
+        "z": "69d27fb55e93041c",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalIn.SetPoint_Alarm_5\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "7361bd4062bb3670"
+            ]
+        ]
+    },
+    {
+        "id": "05aa9e6c48c8e582",
+        "type": "digital output",
+        "z": "69d27fb55e93041c",
+        "module": "1",
+        "channel": "6",
+        "name": "",
+        "x": 550,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06c0a9d4ddb20eb4",
+        "type": "function",
+        "z": "69d27fb55e93041c",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalIn.SetPoint_Alarm_6\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "05aa9e6c48c8e582"
+            ]
+        ]
+    },
+    {
+        "id": "f193db5e74a5154d",
+        "type": "digital output",
+        "z": "69d27fb55e93041c",
+        "module": "1",
+        "channel": "8",
+        "name": "",
+        "x": 550,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b31c2e68103b36fb",
+        "type": "digital output",
+        "z": "69d27fb55e93041c",
+        "module": "1",
+        "channel": "7",
+        "name": "",
+        "x": 550,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1de91c36ceebe42",
+        "type": "function",
+        "z": "69d27fb55e93041c",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalIn.SetPoint_Alarm_7\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 440,
+        "wires": [
+            [
+                "b31c2e68103b36fb"
+            ]
+        ]
+    },
+    {
+        "id": "c1e6356302b699ce",
+        "type": "function",
+        "z": "69d27fb55e93041c",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalIn.SetPoint_Alarm_8\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 500,
+        "wires": [
+            [
+                "f193db5e74a5154d"
+            ]
+        ]
+    },
+    {
+        "id": "efd701203afeaa2c",
+        "type": "function",
+        "z": "4131f795a91fa6ca",
+        "name": "",
+        "func": "global.set(\"controls.analogIn.Zone1Valve1\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f400504b53483cc",
+        "type": "analog input",
+        "z": "4131f795a91fa6ca",
+        "module": "2",
+        "channel": "1",
+        "name": "",
+        "sensorType": "4-20mA",
+        "resolution": "16_Bit",
+        "selectedProcess": "Scaled",
+        "low": "0",
+        "high": "100",
+        "precision": "2",
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "efd701203afeaa2c"
+            ]
+        ]
+    },
+    {
+        "id": "ffc76df1b8aa77ed",
+        "type": "function",
+        "z": "4131f795a91fa6ca",
+        "name": "",
+        "func": "global.set(\"controls.analogIn.Zone1Valve2\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ee0af043f1598e2",
+        "type": "analog input",
+        "z": "4131f795a91fa6ca",
+        "module": "2",
+        "channel": "2",
+        "name": "",
+        "sensorType": "4-20mA",
+        "resolution": "16_Bit",
+        "selectedProcess": "Scaled",
+        "low": "0",
+        "high": "100",
+        "precision": "2",
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "ffc76df1b8aa77ed"
+            ]
+        ]
+    },
+    {
+        "id": "0d4d3b8d00835933",
+        "type": "function",
+        "z": "4131f795a91fa6ca",
+        "name": "",
+        "func": "global.set(\"controls.analogIn.Zone2Valve1\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c10b541a4583be3",
+        "type": "analog input",
+        "z": "4131f795a91fa6ca",
+        "module": "2",
+        "channel": "3",
+        "name": "",
+        "sensorType": "4-20mA",
+        "resolution": "16_Bit",
+        "selectedProcess": "Scaled",
+        "low": "0",
+        "high": "100",
+        "precision": "2",
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "0d4d3b8d00835933"
+            ]
+        ]
+    },
+    {
+        "id": "ffe8cc70a5cf3479",
+        "type": "function",
+        "z": "4131f795a91fa6ca",
+        "name": "",
+        "func": "global.set(\"controls.analogIn.Zone2Valve2\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f7ad6be3ae33751",
+        "type": "analog input",
+        "z": "4131f795a91fa6ca",
+        "module": "2",
+        "channel": "4",
+        "name": "",
+        "sensorType": "4-20mA",
+        "resolution": "16_Bit",
+        "selectedProcess": "Scaled",
+        "low": "0",
+        "high": "100",
+        "precision": "2",
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "ffe8cc70a5cf3479"
+            ]
+        ]
+    },
+    {
+        "id": "58e3abde654b5846",
+        "type": "split",
+        "z": "6e05f0b4bf4b50bb",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "77c6a5cf4a869d28"
+            ]
+        ]
+    },
+    {
+        "id": "77c6a5cf4a869d28",
+        "type": "split",
+        "z": "6e05f0b4bf4b50bb",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "e633917c79419c5c"
+            ]
+        ]
+    },
+    {
+        "id": "e633917c79419c5c",
+        "type": "split",
+        "z": "6e05f0b4bf4b50bb",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "9a32abdd3baac70f"
+            ]
+        ]
+    },
+    {
+        "id": "9a32abdd3baac70f",
+        "type": "split",
+        "z": "6e05f0b4bf4b50bb",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 510,
+        "y": 300,
+        "wires": [
+            [
+                "ef03403b9728ada6"
+            ]
+        ]
+    },
+    {
+        "id": "ef03403b9728ada6",
+        "type": "split",
+        "z": "6e05f0b4bf4b50bb",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 630,
+        "y": 340,
+        "wires": [
+            [
+                "088608f4d70809ce"
+            ]
+        ]
+    },
+    {
+        "id": "088608f4d70809ce",
+        "type": "split",
+        "z": "6e05f0b4bf4b50bb",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 750,
+        "y": 380,
+        "wires": [
+            [
+                "da3f0ffb682a077d"
+            ]
+        ]
+    },
+    {
+        "id": "da3f0ffb682a077d",
+        "type": "split",
+        "z": "6e05f0b4bf4b50bb",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 870,
+        "y": 380,
+        "wires": [
+            [
+                "9f0fb5e4965a09a3"
+            ]
+        ]
+    },
+    {
+        "id": "9f0fb5e4965a09a3",
+        "type": "split",
+        "z": "6e05f0b4bf4b50bb",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 990,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6a6414c2823f073",
+        "type": "comment",
+        "z": "0bdc3439685e9e46",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c1a5b14ae3739eaa",
+        "type": "kbus in",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "topic": "PFC200",
+        "qos": "1",
+        "broker": "8dbb6511f0ee6499",
+        "ignoreempty": true,
+        "removemqttconfig": false,
+        "x": 200,
+        "y": 620,
+        "wires": [
+            [],
+            [
+                "a709d4ec4882f966",
+                "4e353d19c31d1122",
+                "e90f1651b8efb32e",
+                "f5c67483b5378502",
+                "fa7752790db1e637",
+                "0f2e7dc9618360c5",
+                "3bfba7c592d6e056",
+                "76824d9a0f84d8d1",
+                "15d44c5f3628c1c8",
+                "ddcb767bf8cbb24e",
+                "407ab2f39715c3aa",
+                "6a8602ac23ecd36b"
+            ]
+        ]
+    },
+    {
+        "id": "31812289dbe89558",
+        "type": "digital output",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "1",
+        "name": "",
+        "x": 750,
+        "y": 1260,
+        "wires": [
+            [
+                "1171c0e6ca494eb2",
+                "f1d55334d67cb3ef"
+            ]
+        ]
+    },
+    {
+        "id": "97b5a23beb794b0c",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var button = global.get(\"buttons.forceOutput.1\");\nvar alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_1\");\n\nmsg.payload = button || alrm;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1260,
+        "wires": [
+            [
+                "31812289dbe89558"
+            ]
+        ]
+    },
+    {
+        "id": "8f26f4b97da18de8",
+        "type": "digital output",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "2",
+        "name": "",
+        "x": 750,
+        "y": 1320,
+        "wires": [
+            [
+                "1171c0e6ca494eb2",
+                "e70b4f5ab06569f3"
+            ]
+        ]
+    },
+    {
+        "id": "96d2a50565316b95",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var button = global.get(\"buttons.forceOutput.2\");\nvar alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_2\");\n\nmsg.payload = button || alrm;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1320,
+        "wires": [
+            [
+                "8f26f4b97da18de8"
+            ]
+        ]
+    },
+    {
+        "id": "4509966b97fdade9",
+        "type": "digital output",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "4",
+        "name": "",
+        "x": 750,
+        "y": 1440,
+        "wires": [
+            [
+                "1171c0e6ca494eb2",
+                "233316c5cceea265"
+            ]
+        ]
+    },
+    {
+        "id": "c8c82fc73f33b348",
+        "type": "digital output",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "3",
+        "name": "",
+        "x": 750,
+        "y": 1380,
+        "wires": [
+            [
+                "1171c0e6ca494eb2",
+                "5ce1291d21d1c299"
+            ]
+        ]
+    },
+    {
+        "id": "87afd5b4c59a824b",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var button = global.get(\"buttons.forceOutput.3\");\nvar alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_3\");\n\nmsg.payload = button || alrm;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1380,
+        "wires": [
+            [
+                "c8c82fc73f33b348"
+            ]
+        ]
+    },
+    {
+        "id": "8aafee688917413e",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var button = global.get(\"buttons.forceOutput.4\");\nvar alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_4\");\n\nmsg.payload = button || alrm;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1440,
+        "wires": [
+            [
+                "4509966b97fdade9"
+            ]
+        ]
+    },
+    {
+        "id": "c1172cd9f6505566",
+        "type": "digital output",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "5",
+        "name": "",
+        "x": 750,
+        "y": 1500,
+        "wires": [
+            [
+                "1171c0e6ca494eb2",
+                "a0af683297108c90"
+            ]
+        ]
+    },
+    {
+        "id": "c6eadd0803e6af02",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var button = global.get(\"buttons.forceOutput.5\");\nvar alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_5\");\n\nmsg.payload = button || alrm;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1500,
+        "wires": [
+            [
+                "c1172cd9f6505566"
+            ]
+        ]
+    },
+    {
+        "id": "2efcf0cd1d33f280",
+        "type": "digital output",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "6",
+        "name": "",
+        "x": 750,
+        "y": 1560,
+        "wires": [
+            [
+                "1171c0e6ca494eb2",
+                "184fc013a67b3243"
+            ]
+        ]
+    },
+    {
+        "id": "bd44076088cc9cc0",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var button = global.get(\"buttons.forceOutput.6\");\nvar alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_6\");\n\nmsg.payload = button || alrm;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1560,
+        "wires": [
+            [
+                "2efcf0cd1d33f280"
+            ]
+        ]
+    },
+    {
+        "id": "1e4eb7fdba669884",
+        "type": "digital output",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "8",
+        "name": "",
+        "x": 750,
+        "y": 1680,
+        "wires": [
+            [
+                "1171c0e6ca494eb2",
+                "787816de78b9eb94"
+            ]
+        ]
+    },
+    {
+        "id": "34e6be032a40664a",
+        "type": "digital output",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "7",
+        "name": "",
+        "x": 750,
+        "y": 1620,
+        "wires": [
+            [
+                "1171c0e6ca494eb2",
+                "eb2f8fbbea833d3b"
+            ]
+        ]
+    },
+    {
+        "id": "2205e37f0066dc44",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var button = global.get(\"buttons.forceOutput.7\");\nvar alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_7\");\n\nmsg.payload = button || alrm;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1620,
+        "wires": [
+            [
+                "34e6be032a40664a"
+            ]
+        ]
+    },
+    {
+        "id": "5cc24e95778bf88f",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var button = global.get(\"buttons.forceOutput.8\");\nvar alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_8\");\n\nmsg.payload = button || alrm;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1680,
+        "wires": [
+            [
+                "1e4eb7fdba669884"
+            ]
+        ]
+    },
+    {
+        "id": "1171c0e6ca494eb2",
+        "type": "kbus out",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "topic": "PFC200",
+        "qos": "0",
+        "broker": "8dbb6511f0ee6499",
+        "ignoreempty": true,
+        "removemqttconfig": false,
+        "x": 1060,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "a709d4ec4882f966",
+        "type": "digital input",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "1",
+        "name": "",
+        "x": 670,
+        "y": 180,
+        "wires": [
+            [
+                "29114c1e9698f487"
+            ]
+        ]
+    },
+    {
+        "id": "4e353d19c31d1122",
+        "type": "digital input",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "2",
+        "name": "",
+        "x": 670,
+        "y": 240,
+        "wires": [
+            [
+                "225ea9bfd1ba687c"
+            ]
+        ]
+    },
+    {
+        "id": "e90f1651b8efb32e",
+        "type": "digital input",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "3",
+        "name": "",
+        "x": 670,
+        "y": 300,
+        "wires": [
+            [
+                "66b430d3b9db1f1f"
+            ]
+        ]
+    },
+    {
+        "id": "f5c67483b5378502",
+        "type": "digital input",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "4",
+        "name": "",
+        "x": 670,
+        "y": 360,
+        "wires": [
+            [
+                "cc43cfd741ed481d"
+            ]
+        ]
+    },
+    {
+        "id": "fa7752790db1e637",
+        "type": "digital input",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "5",
+        "name": "",
+        "x": 670,
+        "y": 420,
+        "wires": [
+            [
+                "1604592fc3b8958a"
+            ]
+        ]
+    },
+    {
+        "id": "0f2e7dc9618360c5",
+        "type": "digital input",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "6",
+        "name": "",
+        "x": 670,
+        "y": 480,
+        "wires": [
+            [
+                "8284cef1ea209698"
+            ]
+        ]
+    },
+    {
+        "id": "3bfba7c592d6e056",
+        "type": "digital input",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "7",
+        "name": "",
+        "x": 670,
+        "y": 540,
+        "wires": [
+            [
+                "2850aec556437e2f"
+            ]
+        ]
+    },
+    {
+        "id": "76824d9a0f84d8d1",
+        "type": "digital input",
+        "z": "0bdc3439685e9e46",
+        "module": "1",
+        "channel": "8",
+        "name": "",
+        "x": 670,
+        "y": 600,
+        "wires": [
+            [
+                "0adce4a2da42dc69"
+            ]
+        ]
+    },
+    {
+        "id": "225ea9bfd1ba687c",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_2\");\n\nif (alrm != msg.payload){\n    node.send(msg);\n    global.set(\"controls.digitalIn.SetPoint_Alarm_2\", msg.payload);\n}\n\n//global.set(\"controls.digitalIn.SetPoint_Alarm_2\", msg.payload);\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 240,
+        "wires": [
+            [
+                "9ffc51bdad44a5e7"
+            ]
+        ]
+    },
+    {
+        "id": "66b430d3b9db1f1f",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_3\");\n\nif (alrm != msg.payload){\n    node.send(msg);\n    global.set(\"controls.digitalIn.SetPoint_Alarm_3\", msg.payload);\n}\n\n//global.set(\"controls.digitalIn.SetPoint_Alarm_3\", msg.payload);\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 300,
+        "wires": [
+            [
+                "56219a4d69e78218"
+            ]
+        ]
+    },
+    {
+        "id": "cc43cfd741ed481d",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_4\");\n\nif (alrm != msg.payload){\n    node.send(msg);\n    global.set(\"controls.digitalIn.SetPoint_Alarm_4\", msg.payload);\n}\n\n//global.set(\"controls.digitalIn.SetPoint_Alarm_4\", msg.payload);\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 360,
+        "wires": [
+            [
+                "60cd97f6953ca696"
+            ]
+        ]
+    },
+    {
+        "id": "1604592fc3b8958a",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_5\");\n\nif (alrm != msg.payload){\n    node.send(msg);\n    global.set(\"controls.digitalIn.SetPoint_Alarm_5\", msg.payload);\n}\n\n//global.set(\"controls.digitalIn.SetPoint_Alarm_5\", msg.payload);\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 420,
+        "wires": [
+            [
+                "b09f15c3a2192358"
+            ]
+        ]
+    },
+    {
+        "id": "8284cef1ea209698",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_6\");\n\nif (alrm != msg.payload){\n    node.send(msg);\n    global.set(\"controls.digitalIn.SetPoint_Alarm_6\", msg.payload);\n}\n\n//global.set(\"controls.digitalIn.SetPoint_Alarm_6\", msg.payload);\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 480,
+        "wires": [
+            [
+                "7b9134fb22cd8f93"
+            ]
+        ]
+    },
+    {
+        "id": "2850aec556437e2f",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_7\");\n\nif (alrm != msg.payload){\n    node.send(msg);\n    global.set(\"controls.digitalIn.SetPoint_Alarm_7\", msg.payload);\n}\n\n//global.set(\"controls.digitalIn.SetPoint_Alarm_7\", msg.payload);\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 540,
+        "wires": [
+            [
+                "e35eff0fd6054a5f"
+            ]
+        ]
+    },
+    {
+        "id": "0adce4a2da42dc69",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_8\");\n\nif (alrm != msg.payload){\n    node.send(msg);\n    global.set(\"controls.digitalIn.SetPoint_Alarm_8\", msg.payload);\n}\n\n//global.set(\"controls.digitalIn.SetPoint_Alarm_8\", msg.payload);\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 600,
+        "wires": [
+            [
+                "4cbfc38da9841595"
+            ]
+        ]
+    },
+    {
+        "id": "48d22b23c2948cc9",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.analogIn.Zone1Valve1\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15d44c5f3628c1c8",
+        "type": "analog input",
+        "z": "0bdc3439685e9e46",
+        "module": "2",
+        "channel": "1",
+        "name": "",
+        "sensorType": "4-20mA",
+        "resolution": "12_Bit",
+        "selectedProcess": "Scaled",
+        "low": "0",
+        "high": "100",
+        "precision": "2",
+        "x": 670,
+        "y": 700,
+        "wires": [
+            [
+                "48d22b23c2948cc9"
+            ]
+        ]
+    },
+    {
+        "id": "2f8b0a823a4fb6ac",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.analogIn.Zone1Valve2\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddcb767bf8cbb24e",
+        "type": "analog input",
+        "z": "0bdc3439685e9e46",
+        "module": "2",
+        "channel": "2",
+        "name": "",
+        "sensorType": "4-20mA",
+        "resolution": "16_Bit",
+        "selectedProcess": "Scaled",
+        "low": "0",
+        "high": "100",
+        "precision": "2",
+        "x": 670,
+        "y": 780,
+        "wires": [
+            [
+                "2f8b0a823a4fb6ac"
+            ]
+        ]
+    },
+    {
+        "id": "7cf0113c9ed2f5fa",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.analogIn.Zone2Valve1\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "407ab2f39715c3aa",
+        "type": "analog input",
+        "z": "0bdc3439685e9e46",
+        "module": "2",
+        "channel": "3",
+        "name": "",
+        "sensorType": "4-20mA",
+        "resolution": "16_Bit",
+        "selectedProcess": "Scaled",
+        "low": "0",
+        "high": "100",
+        "precision": "2",
+        "x": 670,
+        "y": 860,
+        "wires": [
+            [
+                "7cf0113c9ed2f5fa"
+            ]
+        ]
+    },
+    {
+        "id": "7cd57d55744909c0",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.analogIn.Zone2Valve2\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a8602ac23ecd36b",
+        "type": "analog input",
+        "z": "0bdc3439685e9e46",
+        "module": "2",
+        "channel": "4",
+        "name": "",
+        "sensorType": "4-20mA",
+        "resolution": "16_Bit",
+        "selectedProcess": "Scaled",
+        "low": "0",
+        "high": "100",
+        "precision": "2",
+        "x": 670,
+        "y": 940,
+        "wires": [
+            [
+                "7cd57d55744909c0"
+            ]
+        ]
+    },
+    {
+        "id": "f1d55334d67cb3ef",
+        "type": "subflow:6e05f0b4bf4b50bb",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "x": 1080,
+        "y": 1260,
+        "wires": [
+            [
+                "b1b586f3e5763b09"
+            ]
+        ]
+    },
+    {
+        "id": "29114c1e9698f487",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "var alrm = global.get(\"controls.digitalIn.SetPoint_Alarm_1\");\n\nif (alrm != msg.payload){\n    node.send(msg);\n    global.set(\"controls.digitalIn.SetPoint_Alarm_1\", msg.payload);\n}\n\n//global.set(\"controls.digitalIn.SetPoint_Alarm_1\", msg.payload);\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 180,
+        "wires": [
+            [
+                "e916ac2f468a093c"
+            ]
+        ]
+    },
+    {
+        "id": "28295aac5b2cb39a",
+        "type": "inject",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": ".5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1460,
+        "wires": [
+            [
+                "96d2a50565316b95",
+                "87afd5b4c59a824b",
+                "8aafee688917413e",
+                "c6eadd0803e6af02",
+                "bd44076088cc9cc0",
+                "2205e37f0066dc44",
+                "5cc24e95778bf88f",
+                "97b5a23beb794b0c"
+            ]
+        ]
+    },
+    {
+        "id": "b1b586f3e5763b09",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.digitalOut.Output1\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e70b4f5ab06569f3",
+        "type": "subflow:6e05f0b4bf4b50bb",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "x": 1080,
+        "y": 1320,
+        "wires": [
+            [
+                "88e5cee9865dd7a3"
+            ]
+        ]
+    },
+    {
+        "id": "88e5cee9865dd7a3",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.digitalOut.Output2\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ce1291d21d1c299",
+        "type": "subflow:6e05f0b4bf4b50bb",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "x": 1080,
+        "y": 1380,
+        "wires": [
+            [
+                "2f21aea5a78cb963"
+            ]
+        ]
+    },
+    {
+        "id": "2f21aea5a78cb963",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.digitalOut.Output3\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "233316c5cceea265",
+        "type": "subflow:6e05f0b4bf4b50bb",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "x": 1080,
+        "y": 1440,
+        "wires": [
+            [
+                "1d676f288f0a1c8f"
+            ]
+        ]
+    },
+    {
+        "id": "1d676f288f0a1c8f",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.digitalOut.Output4\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0af683297108c90",
+        "type": "subflow:6e05f0b4bf4b50bb",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "x": 1080,
+        "y": 1500,
+        "wires": [
+            [
+                "df263c3e7b9dc278"
+            ]
+        ]
+    },
+    {
+        "id": "df263c3e7b9dc278",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.digitalOut.Output5\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "184fc013a67b3243",
+        "type": "subflow:6e05f0b4bf4b50bb",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "x": 1080,
+        "y": 1560,
+        "wires": [
+            [
+                "1875fa151895bdb9"
+            ]
+        ]
+    },
+    {
+        "id": "1875fa151895bdb9",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.digitalOut.Output6\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb2f8fbbea833d3b",
+        "type": "subflow:6e05f0b4bf4b50bb",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "x": 1080,
+        "y": 1620,
+        "wires": [
+            [
+                "9c34ddd3d1a80f76"
+            ]
+        ]
+    },
+    {
+        "id": "9c34ddd3d1a80f76",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.digitalOut.Output7\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "787816de78b9eb94",
+        "type": "subflow:6e05f0b4bf4b50bb",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "x": 1080,
+        "y": 1680,
+        "wires": [
+            [
+                "45a6eb0a6030954f"
+            ]
+        ]
+    },
+    {
+        "id": "45a6eb0a6030954f",
+        "type": "function",
+        "z": "0bdc3439685e9e46",
+        "name": "",
+        "func": "global.set(\"controls.digitalOut.Output8\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a99179d39f6fb2e9",
+        "type": "comment",
+        "z": "0bdc3439685e9e46",
+        "name": "Digital Input parsing",
+        "info": "Read PFC200 input data from the MQTT API\n\nPut the input states into a global context variable\n\nInput that variable into the dashboard ",
+        "x": 150,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d465ebb25b2c6c06",
+        "type": "comment",
+        "z": "0bdc3439685e9e46",
+        "name": "Analog input to Global variable",
+        "info": "",
+        "x": 230,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "8ff38146e8677d71",
+        "type": "comment",
+        "z": "0bdc3439685e9e46",
+        "name": "Output control logic based on input and button in ui",
+        "info": "The function node after the timestamp\nacts as the logic to trigger the output.\n\nThe PFC ouptut node accepts a true or false\nboolean signal which is written from \nthe output of the function, based on\nthe input and button state.",
+        "x": 230,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "e916ac2f468a093c",
+        "type": "ui_text",
+        "z": "0bdc3439685e9e46",
+        "group": "d1c4f2005d30847e",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Input 1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9ffc51bdad44a5e7",
+        "type": "ui_text",
+        "z": "0bdc3439685e9e46",
+        "group": "d1c4f2005d30847e",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Input 2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "56219a4d69e78218",
+        "type": "ui_text",
+        "z": "0bdc3439685e9e46",
+        "group": "d1c4f2005d30847e",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Input 3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "60cd97f6953ca696",
+        "type": "ui_text",
+        "z": "0bdc3439685e9e46",
+        "group": "d1c4f2005d30847e",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Input 4",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b09f15c3a2192358",
+        "type": "ui_text",
+        "z": "0bdc3439685e9e46",
+        "group": "d1c4f2005d30847e",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Input 5",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7b9134fb22cd8f93",
+        "type": "ui_text",
+        "z": "0bdc3439685e9e46",
+        "group": "d1c4f2005d30847e",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Input 6",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e35eff0fd6054a5f",
+        "type": "ui_text",
+        "z": "0bdc3439685e9e46",
+        "group": "d1c4f2005d30847e",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Input 7",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4cbfc38da9841595",
+        "type": "ui_text",
+        "z": "0bdc3439685e9e46",
+        "group": "d1c4f2005d30847e",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Input 8",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "c226fa57b3f4d4bb",
+        "type": "ui_gauge",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "group": "892c1744976d6970",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Analog_In_1",
+        "label": "mA",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 950,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "99c943a91feee8aa",
+        "type": "ui_gauge",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "group": "892c1744976d6970",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Analog_In_2",
+        "label": "mA",
+        "format": "{{value}}",
+        "min": "4",
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 950,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1825393132da6924",
+        "type": "ui_gauge",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "group": "892c1744976d6970",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Analog_In_3",
+        "label": "mA",
+        "format": "{{value}}",
+        "min": "4",
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 950,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "cdde26badc9d5a91",
+        "type": "ui_gauge",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "group": "892c1744976d6970",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Analog_In_4",
+        "label": "mA",
+        "format": "{{value}}",
+        "min": "4",
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 950,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "530ea733525c424d",
+        "type": "ui_text",
+        "z": "0a641bc694c2d3c7",
+        "group": "8782250ab038ca44",
+        "order": 7,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Output 7",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "89f15d325691d438",
+        "type": "ui_text",
+        "z": "0a641bc694c2d3c7",
+        "group": "8782250ab038ca44",
+        "order": 8,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Output 8",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "6db2e90bf2ce01ba",
+        "type": "ui_text",
+        "z": "0a641bc694c2d3c7",
+        "group": "8782250ab038ca44",
+        "order": 6,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Output 6",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "8e2a552e3f1a1a64",
+        "type": "ui_text",
+        "z": "0a641bc694c2d3c7",
+        "group": "8782250ab038ca44",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Output 5",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "934f358adc8f543c",
+        "type": "ui_text",
+        "z": "0a641bc694c2d3c7",
+        "group": "8782250ab038ca44",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Output 4",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "cd87e83182a84608",
+        "type": "ui_text",
+        "z": "0a641bc694c2d3c7",
+        "group": "8782250ab038ca44",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Output 3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "28725f5d82d58bc6",
+        "type": "ui_text",
+        "z": "0a641bc694c2d3c7",
+        "group": "8782250ab038ca44",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Output 2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0b7f64331eb9e4db",
+        "type": "ui_text",
+        "z": "0a641bc694c2d3c7",
+        "group": "8782250ab038ca44",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Digital Output 1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d00b66b7cc9ce125",
+        "type": "inject",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 420,
+        "wires": [
+            [
+                "7754cf5bc3782bc1",
+                "2dc6dfa85a561706",
+                "65e43a292945afcc",
+                "fa5605c96a728183",
+                "bb95f0c191f82261",
+                "34f04eb0a34e8af6",
+                "9af5713667a88089",
+                "090d4ac517c5141c",
+                "c556a9dcdea4c9b4",
+                "06dafafdf9b4d527",
+                "e89ed191e0397dbf",
+                "b473abe609af73cc"
+            ]
+        ]
+    },
+    {
+        "id": "7754cf5bc3782bc1",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.analogIn.Zone1Valve1\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 140,
+        "wires": [
+            [
+                "c226fa57b3f4d4bb"
+            ]
+        ]
+    },
+    {
+        "id": "2dc6dfa85a561706",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.analogIn.Zone1Valve2\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 180,
+        "wires": [
+            [
+                "99c943a91feee8aa"
+            ]
+        ]
+    },
+    {
+        "id": "65e43a292945afcc",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.analogIn.Zone2Valve1\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 220,
+        "wires": [
+            [
+                "1825393132da6924"
+            ]
+        ]
+    },
+    {
+        "id": "fa5605c96a728183",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.analogIn.Zone2Valve1\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "cdde26badc9d5a91"
+            ]
+        ]
+    },
+    {
+        "id": "bb95f0c191f82261",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalOut.Output1\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 340,
+        "wires": [
+            [
+                "0b7f64331eb9e4db"
+            ]
+        ]
+    },
+    {
+        "id": "34f04eb0a34e8af6",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalOut.Output2\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 380,
+        "wires": [
+            [
+                "28725f5d82d58bc6"
+            ]
+        ]
+    },
+    {
+        "id": "9af5713667a88089",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalOut.Output3\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 420,
+        "wires": [
+            [
+                "cd87e83182a84608"
+            ]
+        ]
+    },
+    {
+        "id": "090d4ac517c5141c",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalOut.Output4\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 460,
+        "wires": [
+            [
+                "934f358adc8f543c"
+            ]
+        ]
+    },
+    {
+        "id": "c556a9dcdea4c9b4",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalOut.Output5\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 500,
+        "wires": [
+            [
+                "8e2a552e3f1a1a64"
+            ]
+        ]
+    },
+    {
+        "id": "06dafafdf9b4d527",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalOut.Output6\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 540,
+        "wires": [
+            [
+                "6db2e90bf2ce01ba"
+            ]
+        ]
+    },
+    {
+        "id": "e89ed191e0397dbf",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalOut.Output7\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 580,
+        "wires": [
+            [
+                "530ea733525c424d"
+            ]
+        ]
+    },
+    {
+        "id": "b473abe609af73cc",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "msg.payload = global.get(\"controls.digitalOut.Output8\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 620,
+        "wires": [
+            [
+                "89f15d325691d438"
+            ]
+        ]
+    },
+    {
+        "id": "d7a39378b826ea16",
+        "type": "ui_switch",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "label": "Output1",
+        "tooltip": "",
+        "group": "1eee0f10864bf93f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1260,
+        "y": 160,
+        "wires": [
+            [
+                "3f21e836a9e32f61"
+            ]
+        ]
+    },
+    {
+        "id": "3f21e836a9e32f61",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "global.set(\"buttons.forceOutput.1\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "690ccf4844e57a62",
+        "type": "ui_switch",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "label": "Output2",
+        "tooltip": "",
+        "group": "1eee0f10864bf93f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1260,
+        "y": 220,
+        "wires": [
+            [
+                "ab1814d7a7ce7c14"
+            ]
+        ]
+    },
+    {
+        "id": "ab1814d7a7ce7c14",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "global.set(\"buttons.forceOutput.2\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e996bec4080bd98f",
+        "type": "ui_switch",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "label": "Output3",
+        "tooltip": "",
+        "group": "1eee0f10864bf93f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1260,
+        "y": 280,
+        "wires": [
+            [
+                "21aca442eac98aef"
+            ]
+        ]
+    },
+    {
+        "id": "21aca442eac98aef",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "global.set(\"buttons.forceOutput.3\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "231edfb18e7494cb",
+        "type": "ui_switch",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "label": "Output4",
+        "tooltip": "",
+        "group": "1eee0f10864bf93f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1260,
+        "y": 340,
+        "wires": [
+            [
+                "4984f6c42efad166"
+            ]
+        ]
+    },
+    {
+        "id": "4984f6c42efad166",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "global.set(\"buttons.forceOutput.4\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "955893902e5220ae",
+        "type": "ui_switch",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "label": "Output5",
+        "tooltip": "",
+        "group": "1eee0f10864bf93f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1260,
+        "y": 440,
+        "wires": [
+            [
+                "46e2b434cf608f2d"
+            ]
+        ]
+    },
+    {
+        "id": "46e2b434cf608f2d",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "global.set(\"buttons.forceOutput.5\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c679d0d1772c0e93",
+        "type": "ui_switch",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "label": "Output6",
+        "tooltip": "",
+        "group": "1eee0f10864bf93f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1260,
+        "y": 500,
+        "wires": [
+            [
+                "57acb8eaecea6529"
+            ]
+        ]
+    },
+    {
+        "id": "57acb8eaecea6529",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "global.set(\"buttons.forceOutput.6\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "397159035a757964",
+        "type": "ui_switch",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "label": "Output7",
+        "tooltip": "",
+        "group": "1eee0f10864bf93f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1260,
+        "y": 560,
+        "wires": [
+            [
+                "4ec8c3f810a36bf4"
+            ]
+        ]
+    },
+    {
+        "id": "4ec8c3f810a36bf4",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "global.set(\"buttons.forceOutput.7\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "104702673b4a6d7f",
+        "type": "ui_switch",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "label": "Output8",
+        "tooltip": "",
+        "group": "1eee0f10864bf93f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1260,
+        "y": 620,
+        "wires": [
+            [
+                "d9156de155bd59d7"
+            ]
+        ]
+    },
+    {
+        "id": "d9156de155bd59d7",
+        "type": "function",
+        "z": "0a641bc694c2d3c7",
+        "name": "",
+        "func": "global.set(\"buttons.forceOutput.8\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dcbea1e82d6e5024",
+        "type": "comment",
+        "z": "0a641bc694c2d3c7",
+        "name": "UI builder",
+        "info": "This flow houses most of the code for\nprocessing the UI. This is to ensure \nthat the UI is not written at too high\nof a speed ",
+        "x": 220,
+        "y": 160,
+        "wires": []
+    }
+]

@@ -67,7 +67,7 @@ Install Kbus Palette
 ![image](https://user-images.githubusercontent.com/42245728/226684109-c682bddb-5bb1-4d97-ac86-2b1565a04b7b.png)
 
 Import the .JSON Program from the following link:
-https://github.com/jabdelmalak/Node-Red-Examples/blob/main/Kbus-API-With-Dashboard-And-Modbus/Node-red-Kbus-API-with-Dashboard-And-Modbus.json
+https://github.com/jabdelmalak/Node-Red-Examples/blob/97f5f28fe2e82d54a23ecaffb6ff93e10b30baad/Kbus-API-With-Dashboard/Node-Red-Kbus-API%20with%20Dashboard.json
 
 # Changes to the Program
 

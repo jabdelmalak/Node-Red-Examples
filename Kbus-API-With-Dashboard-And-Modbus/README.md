@@ -23,6 +23,7 @@ Change KBUS API config settings:
 ```
 nano /home/docker/volumes/kbusapidata/_data/kbus-api.cfg
 ```
+I've kept the default Node_ID as PFC200. This will be important when referencing the Node-Red Kbus API Node. 
 
 More details on the Kbus API configuration file as well as the data structure presented by the MQTT message can be found here:
 
@@ -42,12 +43,18 @@ Ex: 192.168.1.10:1880
 
 # Install Node Red Palettes
 For this application, we'll need the modbus and Dashboard palettes. These can be installed via the Node Red palette manager 
+
 ![image](https://user-images.githubusercontent.com/42245728/226686627-73aff31a-a25d-4663-b1c4-686e9c256f0c.png)
 
+Install modbus Palette
 
 ![image](https://user-images.githubusercontent.com/42245728/226686501-8a24dfff-23f7-4c2b-8100-afb46c708491.png)
+
+Install Dashboard Palette
+
 ![image](https://user-images.githubusercontent.com/42245728/226686872-5d286c7d-c322-43c6-bc90-b09187f58393.png)
 
+Install Kbus Palette 
 
 ![image](https://user-images.githubusercontent.com/42245728/228616364-b4490df3-57f4-4f11-b335-93b333165702.png)
 
@@ -65,3 +72,10 @@ https://github.com/jabdelmalak/Node-Red-Examples/blob/main/Kbus-API-With-Dashboa
 # Changes to the Program
 
 The Node-Red program consists of several flows. 
+
+The first flow centers around receiving MQTT data from the API via the Wago PFC Kbus In node. When dragging the Kbus In Node to seperated I/O nodes (shown below) make sure to use the lower output of the PFC200 Node. The lower output sends the data JSON message to the I/O which is what read for state analysis. 
+
+![image](https://user-images.githubusercontent.com/42245728/231223982-5ae4265a-4458-4478-90a3-cb6c9d345c80.png)
+
+Here we are simply reading data from the PFC KBUS API and creating a 
+![image](https://user-images.githubusercontent.com/42245728/231223917-9a02a6bd-5047-4d38-b657-093bf7e0ddf9.png)

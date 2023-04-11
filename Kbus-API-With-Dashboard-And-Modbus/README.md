@@ -73,9 +73,48 @@ https://github.com/jabdelmalak/Node-Red-Examples/blob/main/Kbus-API-With-Dashboa
 
 The Node-Red program consists of several flows. 
 
-The first flow centers around receiving MQTT data from the API via the Wago PFC Kbus In node. When dragging the Kbus In Node to seperated I/O nodes (shown below) make sure to use the lower output of the PFC200 Node. The lower output sends the data JSON message to the I/O which is what read for state analysis. 
+## Flow 1
+The first flow centers around receiving MQTT data from the API via the Wago PFC Kbus In node. When dragging the Kbus In Node to seperated I/O nodes (shown below) make sure to use the lower output of the PFC200 Node. The lower output sends the data JSON message to the I/O which is what read for state analysis. Additionally, we are using the dashboard node to publish the state of the digital inputs via a GUI.
 
 ![image](https://user-images.githubusercontent.com/42245728/231223982-5ae4265a-4458-4478-90a3-cb6c9d345c80.png)
 
-Here we are simply reading data from the PFC KBUS API and creating a 
+Here we are simply reading data from the PFC KBUS API and creating a list of global variables to be able to read/write the I/O to other flows. This picture specifically goes over the configuration for the digital and analog inputs.
 ![image](https://user-images.githubusercontent.com/42245728/231223917-9a02a6bd-5047-4d38-b657-093bf7e0ddf9.png)
+
+Here is an example of a function specifically used to set the reading of an analog input to a global variable.
+
+![image](https://user-images.githubusercontent.com/42245728/231238160-8b5159e4-4431-4bef-a9ed-ac5b72d86367.png)
+
+Here I've created a ```controls``` structure that is seperated by the type of signal ```analogIn``` and the physical device that influences the input ```Zone1Valve1```. This variable within the structure is then linked to the output of the analog input node via ```msg.payload```.
+
+When attempting to control the output side. We set a timer to actuate control functions every 500ms and then publish the output action to the output nodes and link them to the Kbus out node. The function after the timer is the control function that would dictate the state of the output. 
+
+![image](https://user-images.githubusercontent.com/42245728/231238897-d798ab9f-1b2f-44e5-93b4-5a495fe7cfe4.png)
+
+The control function for the output is fairly straightforward with the output being toggled by the alarm or button state. 
+
+![image](https://user-images.githubusercontent.com/42245728/231239237-278962cc-8688-4fd8-b7ef-2e156c3fe715.png)
+
+The button state is configured in Flow 2.
+
+## Flow 2
+
+Flow 2 is predominately used for dashboard updating. In an attempt to not bog down the processor and provide unnecessary refreshes for the dashboard, the graphs, buttons, and key value pairs are all updated within a slower refresh rate of 1 second. 
+
+![image](https://user-images.githubusercontent.com/42245728/231240009-a7ea5a49-0f33-4eee-8ba1-5546a43815da.png)
+
+The left side shows the 1 second recurring timestamp to update the analog graph and digital output values by extracting global variable information from the previous flow. The function is shown below:
+
+![image](https://user-images.githubusercontent.com/42245728/231240521-8a4307a3-d1ba-4b09-9813-ea04bfd16583.png)
+
+The right side of the flow shows the button Node which acts as an additional method of controlling the output.
+
+All of these flows together bring the following UI
+
+## The UI
+
+Using the following url schema, you can deply the program and now access the UI: ```<IP_Address>:1880/ui```
+
+![image](https://user-images.githubusercontent.com/42245728/231241044-d28cb23b-2b47-44dc-850d-84348d9e7b5b.png)
+
+

@@ -1,6 +1,7 @@
 # Node-Red-Examples
 This application uses three main Docker images: Node-Red, Wago MQTT KBUS API, and Eclipse MQTT broker. It's also important to note that you must have the select runtime as NONE on the web-based management page of the controller for the API to run. Additionally, ensure the PFC switch is set to RUN.
 
+![image](https://user-images.githubusercontent.com/42245728/231490758-bbcc9cff-5461-42f8-97fe-d65121de19a6.png)
 
 # Docker Run commands
 Node-Red Run command:

@@ -46,9 +46,6 @@ For this application, we'll need the modbus and Dashboard palettes. These can be
 
 ![image](https://user-images.githubusercontent.com/42245728/226686627-73aff31a-a25d-4663-b1c4-686e9c256f0c.png)
 
-Install modbus Palette
-
-![image](https://user-images.githubusercontent.com/42245728/226686501-8a24dfff-23f7-4c2b-8100-afb46c708491.png)
 
 Install Dashboard Palette
 

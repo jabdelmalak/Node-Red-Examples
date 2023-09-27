@@ -1,6 +1,6 @@
 <h1 style="font-weight:normal">
   &nbsp;Counters in Node-Red&nbsp;
-  <a href="counter gif"><img src=/counter.gif></a>
+  <a href="counter gif"><img src=counter.gif></a>
 </h1>
 
 ![](https://github.com/jabdelmalak/Node-Red-Examples/blob/e4d9f04f317b4f3957d31a676d230edffb29196c/PLC%20Logic/counter.gif)

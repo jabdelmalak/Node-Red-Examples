@@ -1,0 +1,196 @@
+[
+    {
+        "id": "15bb08e4f9e36ec6",
+        "type": "tab",
+        "label": "Counter",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4ad3ad2a236a4428",
+        "type": "inject",
+        "z": "15bb08e4f9e36ec6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "ed9ae17b2a2505dd"
+            ]
+        ]
+    },
+    {
+        "id": "ed9ae17b2a2505dd",
+        "type": "function",
+        "z": "15bb08e4f9e36ec6",
+        "name": "Create object",
+        "func": "var counter = \n{\n    input: false,\n    reset: false,\n    startCount: 0, \n    currentCount:0,\n    maxCount : 5\n};\nmsg.payload = counter;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 120,
+        "wires": [
+            [
+                "1f26f7495c6972fb"
+            ]
+        ]
+    },
+    {
+        "id": "1f26f7495c6972fb",
+        "type": "change",
+        "z": "15bb08e4f9e36ec6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Count",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39b5ddce87623ac9",
+        "type": "function",
+        "z": "15bb08e4f9e36ec6",
+        "name": "Counting Function",
+        "func": "//var input = msg.payload\nvar count = global.get(\"Count\")\n\n\nif (msg.topic == \"Reset\") {\n    count.currentCount = count.startCount\n    node.status({ fill: \"green\", shape: \"ring\", text: \"CV: \" + count.currentCount });\n    global.set(\"Count\", count)\n}\n\nif (msg.topic == \"Input\"){\n    count.currentCount = count.currentCount + 1\n    node.status({ fill: \"green\", shape: \"ring\", text: \"CV: \" + count.currentCount });\n    global.set(\"Count\", count)\n\n    if (count.currentCount == count.maxCount){\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Max count: \" + count.currentCount });\n        global.set(\"Count.currentCount\", count.maxCount)\n        msg.payload = true\n\n    }\n\n    if ((count.currentCount > count.maxCount)){\n        count.currentCount = count.startCount\n        node.status({ fill: \"green\", shape: \"ring\", text: \"CV: \" + count.currentCount });\n        global.set(\"Count.currentCount\",count.startCount)\n    }\n}\n//msg.payload = count.currentCount;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 300,
+        "wires": [
+            [
+                "36935364f55f9b53"
+            ]
+        ]
+    },
+    {
+        "id": "3ef77015625efec6",
+        "type": "inject",
+        "z": "15bb08e4f9e36ec6",
+        "name": "Reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Reset",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "39b5ddce87623ac9"
+            ]
+        ]
+    },
+    {
+        "id": "76cae5f75554fea5",
+        "type": "inject",
+        "z": "15bb08e4f9e36ec6",
+        "name": "Input",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Input",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "39b5ddce87623ac9"
+            ]
+        ]
+    },
+    {
+        "id": "36935364f55f9b53",
+        "type": "debug",
+        "z": "15bb08e4f9e36ec6",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "760bf15059cfcd0a",
+        "type": "comment",
+        "z": "15bb08e4f9e36ec6",
+        "name": "Create the counting object",
+        "info": "",
+        "x": 170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "9361e7747ec86a01",
+        "type": "comment",
+        "z": "15bb08e4f9e36ec6",
+        "name": "Utilize instance of counter",
+        "info": "",
+        "x": 170,
+        "y": 220,
+        "wires": []
+    }
+]

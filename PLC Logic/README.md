@@ -1,5 +1,5 @@
 <h1 style="font-weight:normal">
-  &nbsp;node-red-contrib-wago&nbsp;
+  &nbsp;Counters in Node-Red&nbsp;
   <a href="counter gif"><img src=/counter.gif></a>
 </h1>
 

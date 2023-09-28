@@ -1,0 +1,234 @@
+[
+    {
+        "id": "cc324d689e0689bc",
+        "type": "tab",
+        "label": "Timer",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "727bc7c01af32018",
+        "type": "inject",
+        "z": "cc324d689e0689bc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.05",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 710,
+        "y": 140,
+        "wires": [
+            [
+                "e5bb1944bd137963"
+            ]
+        ]
+    },
+    {
+        "id": "e5bb1944bd137963",
+        "type": "function",
+        "z": "cc324d689e0689bc",
+        "name": "Create object",
+        "func": "var timer = \n{\n    enabled: false,\n    input: false,\n    reset: false,\n    elapsedTime:0,\n    presetTime : 0\n};\nmsg.payload = timer;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 140,
+        "wires": [
+            [
+                "909640a712cd5325"
+            ]
+        ]
+    },
+    {
+        "id": "909640a712cd5325",
+        "type": "change",
+        "z": "cc324d689e0689bc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Timer",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fc696d7c5ae6e4ed",
+        "type": "function",
+        "z": "cc324d689e0689bc",
+        "name": "Timing Function",
+        "func": "var Timer = global.get(\"Timer\")\n\nif (msg.topic == \"PresetTime\")\n{\n    Timer.presetTime = msg.payload\n    global.set(\"Timer\", Timer)\n    node.status({ fill: \"yellow\", shape: \"ring\", text: \"PT: \" + Timer.presetTime });\n}\n\nif (msg.topic == \"Input\")\n{\n    node.send({ payload: false })\n    node.send({payload:\"Timer Started\"})\n    var difference = 0\n    Timer.enabled = true\n    Timer.startTime = new Date().getTime()\n    global.set(\"Timer\", Timer)\n    node.status({ fill: \"green\", shape: \"ring\", text: \"PT: \" + Timer.presetTime + \", \" + \"ET: \" + difference/1000 });\n}\n\nif (msg.topic == \"Reset\")\n{\n    node.send({ payload: \"Timer Reset\" })\n    Timer.startTime = new Date().getTime()\n    global.set(\"Timer\", Timer)\n    node.status({ fill: \"green\", shape: \"ring\", text: \"PT: \" + Timer.presetTime + \", \" + \"ET: \" + difference / 1000 });\n}\n\nif ((msg.topic == \"ElapsedTimeCycle\") && (Timer.enabled == true))\n{\n    \n    Timer.elapsedTime = new Date().getTime()\n    difference = Timer.elapsedTime - Timer.startTime\n    global.set(\"Timer\", Timer)\n    //node.send({ payload: difference })\n    node.status({ fill: \"green\", shape: \"ring\", text: \"PT: \" + Timer.presetTime + \", \" + \"ET: \" + difference/1000 });\n}\n\nif (difference >= Timer.presetTime*1000)\n{\n    //node.send({ payload: difference })\n    node.send({ payload: \"Time reached\" })\n    node.send({ payload: true })\n    Timer.enabled = false\n    global.set(\"Timer\", Timer)\n    node.status({ fill: \"red\", shape: \"ring\", text: \"PT: \" + Timer.presetTime + \", \" + \"ET: \" + difference/1000 });\n\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 360,
+        "wires": [
+            [
+                "678fa63af8539751"
+            ]
+        ]
+    },
+    {
+        "id": "906fd1aa9865e906",
+        "type": "inject",
+        "z": "cc324d689e0689bc",
+        "name": "Reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Reset",
+        "payload": "",
+        "payloadType": "date",
+        "x": 710,
+        "y": 280,
+        "wires": [
+            [
+                "fc696d7c5ae6e4ed"
+            ]
+        ]
+    },
+    {
+        "id": "563919c99504c54d",
+        "type": "inject",
+        "z": "cc324d689e0689bc",
+        "name": "Input",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Input",
+        "payload": "",
+        "payloadType": "date",
+        "x": 710,
+        "y": 320,
+        "wires": [
+            [
+                "fc696d7c5ae6e4ed"
+            ]
+        ]
+    },
+    {
+        "id": "678fa63af8539751",
+        "type": "debug",
+        "z": "cc324d689e0689bc",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "7e011002b869fed4",
+        "type": "inject",
+        "z": "cc324d689e0689bc",
+        "name": "PresetTime",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": ".5",
+        "topic": "PresetTime",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 690,
+        "y": 360,
+        "wires": [
+            [
+                "fc696d7c5ae6e4ed"
+            ]
+        ]
+    },
+    {
+        "id": "0d7039fcbf9140ab",
+        "type": "inject",
+        "z": "cc324d689e0689bc",
+        "name": "ElapsedTimeCycle",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.01",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ElapsedTimeCycle",
+        "payload": "",
+        "payloadType": "date",
+        "x": 700,
+        "y": 420,
+        "wires": [
+            [
+                "fc696d7c5ae6e4ed"
+            ]
+        ]
+    }
+]

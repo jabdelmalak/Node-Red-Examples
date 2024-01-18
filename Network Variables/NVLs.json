@@ -1,0 +1,170 @@
+[
+    {
+        "id": "54daabb9e13aeb2b",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "40f459ff52dce9c1",
+        "type": "group",
+        "z": "54daabb9e13aeb2b",
+        "name": "Receiving Codesys Data",
+        "style": {
+            "label": true,
+            "stroke": "#6f2fa0"
+        },
+        "nodes": [
+            "fddcf998dc122c2e",
+            "ce66abb8a3a63618",
+            "26729cbe40b636d7"
+        ],
+        "x": 94,
+        "y": 179,
+        "w": 252,
+        "h": 202
+    },
+    {
+        "id": "e7fd41ac64ed9385",
+        "type": "group",
+        "z": "54daabb9e13aeb2b",
+        "name": "Writing to Codesys NVL ",
+        "style": {
+            "stroke": "#0070c0",
+            "label": true
+        },
+        "nodes": [
+            "74bc6fae6429d245",
+            "f7e0660e9f1979ba",
+            "36c66b8bc08c59f9"
+        ],
+        "x": 474,
+        "y": 179,
+        "w": 332,
+        "h": 202
+    },
+    {
+        "id": "74bc6fae6429d245",
+        "type": "inject",
+        "z": "54daabb9e13aeb2b",
+        "g": "e7fd41ac64ed9385",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"iCase\": 2}",
+        "payloadType": "json",
+        "x": 590,
+        "y": 220,
+        "wires": [
+            [
+                "f7e0660e9f1979ba"
+            ]
+        ]
+    },
+    {
+        "id": "f7e0660e9f1979ba",
+        "type": "nvl-send",
+        "z": "54daabb9e13aeb2b",
+        "g": "e7fd41ac64ed9385",
+        "name": "",
+        "definition": "VAR_GLOBAL\niCase: int;\nEND_VAR",
+        "listId": "0",
+        "globaltypes": "",
+        "pack": "true",
+        "port": "1202",
+        "x": 600,
+        "y": 280,
+        "wires": [
+            [
+                "36c66b8bc08c59f9"
+            ]
+        ]
+    },
+    {
+        "id": "36c66b8bc08c59f9",
+        "type": "udp out",
+        "z": "54daabb9e13aeb2b",
+        "g": "e7fd41ac64ed9385",
+        "name": "",
+        "addr": "192.168.1.40",
+        "iface": "",
+        "port": "1202",
+        "ipv": "udp4",
+        "outport": "1202",
+        "base64": false,
+        "multicast": "false",
+        "x": 670,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "fddcf998dc122c2e",
+        "type": "nvl-receive",
+        "z": "54daabb9e13aeb2b",
+        "g": "40f459ff52dce9c1",
+        "name": "",
+        "definition": "VAR_GLOBAL\niCase: int;\nEND_VAR",
+        "listId": "1",
+        "globaltypes": "",
+        "pack": "true",
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "26729cbe40b636d7"
+            ]
+        ]
+    },
+    {
+        "id": "ce66abb8a3a63618",
+        "type": "udp in",
+        "z": "54daabb9e13aeb2b",
+        "g": "40f459ff52dce9c1",
+        "name": "",
+        "iface": "",
+        "port": "1202",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "fddcf998dc122c2e"
+            ]
+        ]
+    },
+    {
+        "id": "26729cbe40b636d7",
+        "type": "debug",
+        "z": "54daabb9e13aeb2b",
+        "g": "40f459ff52dce9c1",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 340,
+        "wires": []
+    }
+]

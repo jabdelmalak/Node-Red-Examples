@@ -1,0 +1,1124 @@
+[
+    {
+        "id": "a6cd01c1380e40cb",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "61c321b1d0333cb6",
+        "type": "group",
+        "z": "a6cd01c1380e40cb",
+        "name": "Run/Stop Switch Actions",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "43641a3e7beb1978",
+            "b77eab81784b80c7",
+            "f0813140e32708eb",
+            "6c1250252e02c811",
+            "597802e777d024ba",
+            "74fc111afbd8e4e7",
+            "596a748c16f7560a",
+            "4ae2a239db522292",
+            "74c0e82f2cbef18f",
+            "d3de4f37d16954d7",
+            "f56ed5a841746d30",
+            "ff79c3350aa089e3",
+            "88cc8dd6b899afd7",
+            "662e04677e17b111",
+            "6b0d7784bee0b041",
+            "fab6b38aafd3ce5d",
+            "b2d5a682129a678d",
+            "69fa6a2eeb1c9cc2",
+            "f6a6f6c8c642424f",
+            "a8c8006b3c62d79e"
+        ],
+        "x": 794,
+        "y": 19,
+        "w": 872,
+        "h": 402
+    },
+    {
+        "id": "5e596edebf1c284b",
+        "type": "group",
+        "z": "a6cd01c1380e40cb",
+        "name": "Creating initialization Objects",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "db64f0b0f84490fa",
+            "ef9a31cb87c6621c",
+            "1e9d41d73f9ad4f1",
+            "43349fafafbc6a37"
+        ],
+        "x": 234,
+        "y": 34,
+        "w": 492,
+        "h": 227
+    },
+    {
+        "id": "c53bc83cd3eed3d7",
+        "type": "group",
+        "z": "a6cd01c1380e40cb",
+        "name": "PLC logic Code",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e73f4fde2c5266e8",
+            "6b8660e855a0b454",
+            "8510b04492833854",
+            "90b250898dfeac90",
+            "e9eef8553da88db6",
+            "e3ca18a5394b8f14",
+            "69aaa6fe5485b5cd",
+            "0d55e9cc57d2eadf",
+            "6ae29fa18ac715f0",
+            "bb330ac74649b54b",
+            "c3175a8561da2419",
+            "bf41f1903112aa1b",
+            "7013a8fa6cf39f0c",
+            "76f09ab7967c4740",
+            "9a59f1b846b3a8bb",
+            "d8a90836028bb8e7",
+            "a463613bdb9ae2b6",
+            "ee906de3d1b1131f"
+        ],
+        "x": 134,
+        "y": 479,
+        "w": 1132,
+        "h": 402
+    },
+    {
+        "id": "db64f0b0f84490fa",
+        "type": "modbus-read",
+        "z": "a6cd01c1380e40cb",
+        "g": "5e596edebf1c284b",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Input",
+        "adr": "0",
+        "quantity": "8",
+        "rate": "50",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "0a0a5d0647150da6",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 370,
+        "y": 120,
+        "wires": [
+            [
+                "ef9a31cb87c6621c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ef9a31cb87c6621c",
+        "type": "function",
+        "z": "a6cd01c1380e40cb",
+        "g": "5e596edebf1c284b",
+        "name": "Global Split Array",
+        "func": "var input = msg.payload\nvar output = []\n\n\nfor (let index = 0; index < input.length; index++) {\n    output[index] = {payload: input[index]}\n    \n}\n\nglobal.set(\"FactoryIO.Input.Panel.Start\", output[0])\nglobal.set(\"FactoryIO.Input.Panel.Stop\", output[1])\nglobal.set(\"FactoryIO.Input.Panel.Restart\", output[2])\nglobal.set(\"FactoryIO.Input.Turntable.Backlimit\", output[3])\nglobal.set(\"FactoryIO.Input.Turntable.FrontLimit\", output[4])\nglobal.set(\"FactoryIO.Input.Turntable.RotateLimitZero\", output[5])\nglobal.set(\"FactoryIO.Input.Turntable.RotateLimitNinety\", output[6])\nreturn [output[0], output[1], output[2],\n output[3], output[4], output[5],output[6]];",
+        "outputs": 8,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 120,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e73f4fde2c5266e8",
+        "type": "timer-on",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "DelayTurntable",
+        "presetTimeSec": "2",
+        "presetTimeMin": 0,
+        "x": 660,
+        "y": 520,
+        "wires": [
+            [
+                "e3ca18a5394b8f14"
+            ]
+        ]
+    },
+    {
+        "id": "6b8660e855a0b454",
+        "type": "timer-on",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "StartConveyor",
+        "presetTimeSec": "5",
+        "presetTimeMin": 0,
+        "x": 660,
+        "y": 580,
+        "wires": [
+            [
+                "e3ca18a5394b8f14"
+            ]
+        ]
+    },
+    {
+        "id": "8510b04492833854",
+        "type": "timer-on",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "CycleRepeat",
+        "presetTimeSec": "3",
+        "presetTimeMin": 0,
+        "x": 410,
+        "y": 740,
+        "wires": [
+            [
+                "a463613bdb9ae2b6"
+            ]
+        ]
+    },
+    {
+        "id": "90b250898dfeac90",
+        "type": "timer-on",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "ConveyorRouting",
+        "presetTimeSec": "2",
+        "presetTimeMin": 0,
+        "x": 910,
+        "y": 640,
+        "wires": [
+            [
+                "e3ca18a5394b8f14",
+                "bf41f1903112aa1b"
+            ]
+        ]
+    },
+    {
+        "id": "e9eef8553da88db6",
+        "type": "timer-on",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "PartDelay",
+        "presetTimeSec": "6",
+        "presetTimeMin": 0,
+        "x": 900,
+        "y": 780,
+        "wires": [
+            [
+                "e3ca18a5394b8f14",
+                "76f09ab7967c4740"
+            ]
+        ]
+    },
+    {
+        "id": "e3ca18a5394b8f14",
+        "type": "function",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "PLC logic",
+        "func": "var input = msg;\n\nif (input.topic == \"DelayTurntable\"){\n    if (input.payload == false){\n        global.set(\"FactoryIO.Output.Conveyor.Starting\",true);\n        global.set(\"FactoryIO.Output.Emitter\",true);\n\n    }\n\n    if (input.payload == true){\n        global.set(\"FactoryIO.Output.Emitter\",false);\n        global.set(\"FactoryIO.Output.Turntable.RollPos\",true);\n\n    }\n}\n\nif ((input.topic == \"StartConveyor\")&&(input.payload == true)){\n    global.set(\"FactoryIO.Output.Starting\", false);\n    global.set(\"FactoryIO.Output.Turntable.RollPos\", false);\n    node.send({topic: \"CountUp\",payload:true});\n    node.send({topic: \"Input\",payload:true});\n\n}\n\nif (input.topic == \"ConveyorRouting\") {\n    var count = global.get(\"gCounter.Direction_Counter\");\n    if (input.payload == false){\n        \n        if (count == 0)\n        {\n            count = 1;\n        }\n\n        if ((count == 1)|| (count == 3)){\n            //Left and right Conveyor\n            global.set(\"FactoryIO.Output.Turntable.Turn\", true)\n\n        }\n\n        if (count == 2){\n            global.set(\"FactoryIO.Output.Turntable.Turn\", false)\n\n        }\n    }\n    \n    if (input.payload == true){\n\n        if (count == 1){\n            global.set(\"FactoryIO.Output.Conveyor.Left\", true)\n            global.set(\"FactoryIO.Output.Turntable.RollPos\", true);\n            \n\n        }\n\n        if (count == 2){\n            global.set(\"FactoryIO.Output.Conveyor.Forward\", true)\n            global.set(\"FactoryIO.Output.Turntable.RollPos\", true);\n\n        }\n\n        if (count == 3){\n            global.set(\"FactoryIO.Output.Conveyor.Right\", true)\n            global.set(\"FactoryIO.Output.Turntable.RollMin\", true);\n            node.send({topic: \"Reset\", payload: \"\"});\n            \n\n        }\n\n    }\n    \n}\n\nif (input.topic == \"PartDelay\"){\n    if (input.payload == true){\n        global.set(\"FactoryIO.Output.Conveyor.Starting\", false)\n        global.set(\"FactoryIO.Output.Conveyor.Forward\", false)\n        global.set(\"FactoryIO.Output.Conveyor.Left\", false)\n        global.set(\"FactoryIO.Output.Conveyor.Right\", false)\n        global.set(\"FactoryIO.Output.Turntable.Turn\", false)\n        global.set(\"FactoryIO.Output.Turntable.RollPos\", false)\n        global.set(\"FactoryIO.Output.Turntable.RollMin\", false)\n        global.set(\"FactoryIO.Output.Emitter\", false)\n        \n    }\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 560,
+        "wires": [
+            [
+                "6ae29fa18ac715f0",
+                "90b250898dfeac90"
+            ]
+        ]
+    },
+    {
+        "id": "69aaa6fe5485b5cd",
+        "type": "inject",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Input",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 230,
+        "y": 560,
+        "wires": [
+            [
+                "bb330ac74649b54b",
+                "c3175a8561da2419"
+            ]
+        ]
+    },
+    {
+        "id": "0d55e9cc57d2eadf",
+        "type": "counter",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "Part_Counter",
+        "setPoint": "10000",
+        "startCount": 0,
+        "x": 650,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "43641a3e7beb1978",
+        "type": "Run State",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "cycle": "20",
+        "x": 880,
+        "y": 200,
+        "wires": [
+            [
+                "b77eab81784b80c7"
+            ],
+            [
+                "ff79c3350aa089e3"
+            ]
+        ]
+    },
+    {
+        "id": "b77eab81784b80c7",
+        "type": "switch",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "property": "gStatus.run_status",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "stop",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 60,
+        "wires": [
+            [
+                "4ae2a239db522292"
+            ]
+        ]
+    },
+    {
+        "id": "f0813140e32708eb",
+        "type": "modbus-write",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "Starting Conveyor",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "1",
+        "server": "0a0a5d0647150da6",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1550,
+        "y": 80,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6c1250252e02c811",
+        "type": "modbus-write",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "Emitter",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "Coil",
+        "adr": "11",
+        "quantity": "1",
+        "server": "0a0a5d0647150da6",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1520,
+        "y": 380,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "597802e777d024ba",
+        "type": "modbus-write",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "TurnTable (+)",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "Coil",
+        "adr": "5",
+        "quantity": "1",
+        "server": "0a0a5d0647150da6",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1530,
+        "y": 280,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "74fc111afbd8e4e7",
+        "type": "modbus-write",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "Left Conveyor",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "Coil",
+        "adr": "2",
+        "quantity": "1",
+        "server": "0a0a5d0647150da6",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1540,
+        "y": 160,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "596a748c16f7560a",
+        "type": "modbus-write",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "Turntable",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "Coil",
+        "adr": "4",
+        "quantity": "1",
+        "server": "0a0a5d0647150da6",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1520,
+        "y": 240,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4ae2a239db522292",
+        "type": "change",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1280,
+        "y": 60,
+        "wires": [
+            [
+                "f0813140e32708eb",
+                "74c0e82f2cbef18f",
+                "74fc111afbd8e4e7",
+                "f56ed5a841746d30",
+                "596a748c16f7560a",
+                "597802e777d024ba",
+                "d3de4f37d16954d7",
+                "6c1250252e02c811"
+            ]
+        ]
+    },
+    {
+        "id": "74c0e82f2cbef18f",
+        "type": "modbus-write",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "Forward Conveyor",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "Coil",
+        "adr": "1",
+        "quantity": "1",
+        "server": "0a0a5d0647150da6",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1550,
+        "y": 120,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d3de4f37d16954d7",
+        "type": "modbus-write",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "Turntable roll -",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "Coil",
+        "adr": "6",
+        "quantity": "1",
+        "server": "0a0a5d0647150da6",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1540,
+        "y": 320,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f56ed5a841746d30",
+        "type": "modbus-write",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "Right Conveyor",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "Coil",
+        "adr": "3",
+        "quantity": "1",
+        "server": "0a0a5d0647150da6",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1540,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1e9d41d73f9ad4f1",
+        "type": "inject",
+        "z": "a6cd01c1380e40cb",
+        "g": "5e596edebf1c284b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "43349fafafbc6a37"
+            ]
+        ]
+    },
+    {
+        "id": "43349fafafbc6a37",
+        "type": "function",
+        "z": "a6cd01c1380e40cb",
+        "g": "5e596edebf1c284b",
+        "name": "Global Structure Creation",
+        "func": "var input = msg.payload\n\nglobal.set(\"FactoryIO.Output.Conveyor.Starting\", false)\nglobal.set(\"FactoryIO.Output.Conveyor.Forward\", false)\nglobal.set(\"FactoryIO.Output.Conveyor.Left\", false)\nglobal.set(\"FactoryIO.Output.Conveyor.Right\", false)\nglobal.set(\"FactoryIO.Output.Turntable.Turn\", false)\nglobal.set(\"FactoryIO.Output.Turntable.RollPos\", false)\nglobal.set(\"FactoryIO.Output.Turntable.RollMin\", false)\nglobal.set(\"FactoryIO.Output.Emitter\", false)\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ff79c3350aa089e3",
+        "type": "function",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "Cyclic Output push",
+        "func": "var input = msg.payload\nvar output = []\n\noutput[0] = {payload:global.get(\"FactoryIO.Output.Conveyor.Starting\")};\noutput[1] = {payload: global.get(\"FactoryIO.Output.Conveyor.Forward\")}\noutput[2] = {payload: global.get(\"FactoryIO.Output.Conveyor.Left\")}\noutput[3] = {payload: global.get(\"FactoryIO.Output.Conveyor.Right\")}\noutput[4] = {payload: global.get(\"FactoryIO.Output.Turntable.Turn\")}\noutput[5] = {payload: global.get(\"FactoryIO.Output.Turntable.RollPos\")}\noutput[6] = {payload: global.get(\"FactoryIO.Output.Turntable.RollMin\")}\noutput[7] = {payload: global.get(\"FactoryIO.Output.Emitter\")}\nreturn [output[0], output[1], output[2],\n output[3], output[4], output[5],output[6], output[7]];\n",
+        "outputs": 8,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 220,
+        "wires": [
+            [
+                "88cc8dd6b899afd7"
+            ],
+            [
+                "662e04677e17b111"
+            ],
+            [
+                "6b0d7784bee0b041"
+            ],
+            [
+                "fab6b38aafd3ce5d"
+            ],
+            [
+                "b2d5a682129a678d"
+            ],
+            [
+                "69fa6a2eeb1c9cc2"
+            ],
+            [
+                "f6a6f6c8c642424f"
+            ],
+            [
+                "a8c8006b3c62d79e"
+            ]
+        ]
+    },
+    {
+        "id": "6ae29fa18ac715f0",
+        "type": "counter",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "Direction_Counter",
+        "setPoint": "3",
+        "startCount": 0,
+        "x": 1150,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb330ac74649b54b",
+        "type": "switch",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "",
+        "property": "gStatus.run_status",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "run",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 520,
+        "wires": [
+            [
+                "e73f4fde2c5266e8"
+            ]
+        ]
+    },
+    {
+        "id": "c3175a8561da2419",
+        "type": "switch",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "",
+        "property": "gStatus.run_status",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "run",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 580,
+        "wires": [
+            [
+                "6b8660e855a0b454"
+            ]
+        ]
+    },
+    {
+        "id": "bf41f1903112aa1b",
+        "type": "switch",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 890,
+        "y": 700,
+        "wires": [
+            [
+                "7013a8fa6cf39f0c"
+            ]
+        ]
+    },
+    {
+        "id": "7013a8fa6cf39f0c",
+        "type": "change",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Input",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 740,
+        "wires": [
+            [
+                "e9eef8553da88db6"
+            ]
+        ]
+    },
+    {
+        "id": "76f09ab7967c4740",
+        "type": "switch",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 700,
+        "wires": [
+            [
+                "9a59f1b846b3a8bb",
+                "d8a90836028bb8e7"
+            ]
+        ]
+    },
+    {
+        "id": "9a59f1b846b3a8bb",
+        "type": "change",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "CountUp",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 740,
+        "wires": [
+            [
+                "0d55e9cc57d2eadf"
+            ]
+        ]
+    },
+    {
+        "id": "d8a90836028bb8e7",
+        "type": "change",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Input",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "8510b04492833854"
+            ]
+        ]
+    },
+    {
+        "id": "a463613bdb9ae2b6",
+        "type": "switch",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 800,
+        "wires": [
+            [
+                "ee906de3d1b1131f"
+            ]
+        ]
+    },
+    {
+        "id": "ee906de3d1b1131f",
+        "type": "change",
+        "z": "a6cd01c1380e40cb",
+        "g": "c53bc83cd3eed3d7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Input",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 840,
+        "wires": [
+            [
+                "bb330ac74649b54b",
+                "c3175a8561da2419"
+            ]
+        ]
+    },
+    {
+        "id": "88cc8dd6b899afd7",
+        "type": "rbe",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1310,
+        "y": 100,
+        "wires": [
+            [
+                "f0813140e32708eb"
+            ]
+        ]
+    },
+    {
+        "id": "662e04677e17b111",
+        "type": "rbe",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1310,
+        "y": 140,
+        "wires": [
+            [
+                "74c0e82f2cbef18f"
+            ]
+        ]
+    },
+    {
+        "id": "6b0d7784bee0b041",
+        "type": "rbe",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1310,
+        "y": 180,
+        "wires": [
+            [
+                "74fc111afbd8e4e7"
+            ]
+        ]
+    },
+    {
+        "id": "fab6b38aafd3ce5d",
+        "type": "rbe",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1310,
+        "y": 220,
+        "wires": [
+            [
+                "f56ed5a841746d30"
+            ]
+        ]
+    },
+    {
+        "id": "b2d5a682129a678d",
+        "type": "rbe",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1310,
+        "y": 260,
+        "wires": [
+            [
+                "596a748c16f7560a"
+            ]
+        ]
+    },
+    {
+        "id": "69fa6a2eeb1c9cc2",
+        "type": "rbe",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1310,
+        "y": 300,
+        "wires": [
+            [
+                "597802e777d024ba"
+            ]
+        ]
+    },
+    {
+        "id": "f6a6f6c8c642424f",
+        "type": "rbe",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1310,
+        "y": 340,
+        "wires": [
+            [
+                "d3de4f37d16954d7"
+            ]
+        ]
+    },
+    {
+        "id": "a8c8006b3c62d79e",
+        "type": "rbe",
+        "z": "a6cd01c1380e40cb",
+        "g": "61c321b1d0333cb6",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1310,
+        "y": 380,
+        "wires": [
+            [
+                "6c1250252e02c811"
+            ]
+        ]
+    },
+    {
+        "id": "0a0a5d0647150da6",
+        "type": "modbus-client",
+        "name": "Factory IO",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.1.167",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showWarnings": true,
+        "showLogs": true
+    }
+]

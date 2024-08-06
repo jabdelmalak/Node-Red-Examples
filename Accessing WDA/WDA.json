@@ -1,0 +1,511 @@
+[
+    {
+        "id": "6ba93c7681cd5c0f",
+        "type": "group",
+        "z": "80f749a69b751e4b",
+        "name": "GET Local Time",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ddd9de235603311d",
+            "130fb0550642d48d",
+            "cb50310d865fe64b",
+            "c91c8bcc5d4979ea",
+            "e236713b3518a431"
+        ],
+        "x": 374,
+        "y": 19,
+        "w": 312,
+        "h": 242
+    },
+    {
+        "id": "ddd9de235603311d",
+        "type": "http request",
+        "z": "80f749a69b751e4b",
+        "g": "6ba93c7681cd5c0f",
+        "name": "GET Local Time",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://192.168.1.20:443/wda/parameters/0-0-systemtime-local-now",
+        "tls": "d4f0913d6de1cae0",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 500,
+        "y": 100,
+        "wires": [
+            [
+                "c91c8bcc5d4979ea"
+            ]
+        ]
+    },
+    {
+        "id": "130fb0550642d48d",
+        "type": "inject",
+        "z": "80f749a69b751e4b",
+        "g": "6ba93c7681cd5c0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 480,
+        "y": 60,
+        "wires": [
+            [
+                "ddd9de235603311d"
+            ]
+        ]
+    },
+    {
+        "id": "cb50310d865fe64b",
+        "type": "debug",
+        "z": "80f749a69b751e4b",
+        "g": "6ba93c7681cd5c0f",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c91c8bcc5d4979ea",
+        "type": "json",
+        "z": "80f749a69b751e4b",
+        "g": "6ba93c7681cd5c0f",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "e236713b3518a431"
+            ]
+        ]
+    },
+    {
+        "id": "e236713b3518a431",
+        "type": "function",
+        "z": "80f749a69b751e4b",
+        "g": "6ba93c7681cd5c0f",
+        "name": "Parse JSON",
+        "func": "var path = msg.payload[\"data\"][\"attributes\"][\"path\"];\nvar value = msg.payload[\"data\"][\"attributes\"][\"value\"]\n\nmsg.payload = { path, value };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [
+                "cb50310d865fe64b"
+            ]
+        ]
+    },
+    {
+        "id": "d4f0913d6de1cae0",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "f14efd7cbbc752c2",
+        "type": "group",
+        "z": "80f749a69b751e4b",
+        "name": "GET Bacnet Status",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b2efb5021bda7637",
+            "ef2ffdb6b812f732",
+            "28190a0bf73565e7",
+            "ad7fbb646d8cff8e",
+            "4bc05c67952bba73"
+        ],
+        "x": 374,
+        "y": 279,
+        "w": 312,
+        "h": 242
+    },
+    {
+        "id": "b2efb5021bda7637",
+        "type": "http request",
+        "z": "80f749a69b751e4b",
+        "g": "f14efd7cbbc752c2",
+        "name": "GET Bacnet",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://192.168.1.20:443/wda/parameters/0-0-bacnet-enabled",
+        "tls": "d4f0913d6de1cae0",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 490,
+        "y": 360,
+        "wires": [
+            [
+                "ad7fbb646d8cff8e"
+            ]
+        ]
+    },
+    {
+        "id": "ef2ffdb6b812f732",
+        "type": "inject",
+        "z": "80f749a69b751e4b",
+        "g": "f14efd7cbbc752c2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            [
+                "b2efb5021bda7637"
+            ]
+        ]
+    },
+    {
+        "id": "28190a0bf73565e7",
+        "type": "debug",
+        "z": "80f749a69b751e4b",
+        "g": "f14efd7cbbc752c2",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ad7fbb646d8cff8e",
+        "type": "json",
+        "z": "80f749a69b751e4b",
+        "g": "f14efd7cbbc752c2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "4bc05c67952bba73"
+            ]
+        ]
+    },
+    {
+        "id": "4bc05c67952bba73",
+        "type": "function",
+        "z": "80f749a69b751e4b",
+        "g": "f14efd7cbbc752c2",
+        "name": "Parse JSON",
+        "func": "var path = msg.payload[\"data\"][\"attributes\"][\"path\"];\nvar value = msg.payload[\"data\"][\"attributes\"][\"value\"]\n\nmsg.payload = {path, value};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "28190a0bf73565e7"
+            ]
+        ]
+    },
+    {
+        "id": "db35a7351e2dccfb",
+        "type": "group",
+        "z": "80f749a69b751e4b",
+        "name": "GET FW Version",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b9f32eca96b1997a",
+            "e8a017acead46b5d",
+            "5d78fe061e3c9552",
+            "7b9dd104054b6d64",
+            "83a5d3cf0eb64cd6"
+        ],
+        "x": 734,
+        "y": 19,
+        "w": 312,
+        "h": 242
+    },
+    {
+        "id": "b9f32eca96b1997a",
+        "type": "http request",
+        "z": "80f749a69b751e4b",
+        "g": "db35a7351e2dccfb",
+        "name": "GET FW",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://192.168.1.20:443/wda/parameters/0-0-version-firmwareversion",
+        "tls": "d4f0913d6de1cae0",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 840,
+        "y": 100,
+        "wires": [
+            [
+                "7b9dd104054b6d64"
+            ]
+        ]
+    },
+    {
+        "id": "e8a017acead46b5d",
+        "type": "inject",
+        "z": "80f749a69b751e4b",
+        "g": "db35a7351e2dccfb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 840,
+        "y": 60,
+        "wires": [
+            [
+                "b9f32eca96b1997a"
+            ]
+        ]
+    },
+    {
+        "id": "5d78fe061e3c9552",
+        "type": "debug",
+        "z": "80f749a69b751e4b",
+        "g": "db35a7351e2dccfb",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7b9dd104054b6d64",
+        "type": "json",
+        "z": "80f749a69b751e4b",
+        "g": "db35a7351e2dccfb",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 890,
+        "y": 140,
+        "wires": [
+            [
+                "83a5d3cf0eb64cd6"
+            ]
+        ]
+    },
+    {
+        "id": "83a5d3cf0eb64cd6",
+        "type": "function",
+        "z": "80f749a69b751e4b",
+        "g": "db35a7351e2dccfb",
+        "name": "Parse JSON",
+        "func": "var path = msg.payload[\"data\"][\"attributes\"][\"path\"];\nvar value = msg.payload[\"data\"][\"attributes\"][\"value\"]\n\nmsg.payload = {path, value};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 180,
+        "wires": [
+            [
+                "5d78fe061e3c9552"
+            ]
+        ]
+    },
+    {
+        "id": "d284e907c496e721",
+        "type": "group",
+        "z": "80f749a69b751e4b",
+        "name": "GET ALL parameters",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "af1c6414483c0c1e",
+            "6d9b303214277ff6",
+            "0c489abd8aeb6c0b",
+            "fb0271d3c204427f"
+        ],
+        "x": 34,
+        "y": 159,
+        "w": 272,
+        "h": 202
+    },
+    {
+        "id": "af1c6414483c0c1e",
+        "type": "http request",
+        "z": "80f749a69b751e4b",
+        "g": "d284e907c496e721",
+        "name": "GET Parameters",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://192.168.1.20:443/wda/parameters",
+        "tls": "d4f0913d6de1cae0",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "fb0271d3c204427f"
+            ]
+        ]
+    },
+    {
+        "id": "6d9b303214277ff6",
+        "type": "inject",
+        "z": "80f749a69b751e4b",
+        "g": "d284e907c496e721",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "af1c6414483c0c1e"
+            ]
+        ]
+    },
+    {
+        "id": "0c489abd8aeb6c0b",
+        "type": "debug",
+        "z": "80f749a69b751e4b",
+        "g": "d284e907c496e721",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 180,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "fb0271d3c204427f",
+        "type": "json",
+        "z": "80f749a69b751e4b",
+        "g": "d284e907c496e721",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "0c489abd8aeb6c0b"
+            ]
+        ]
+    }
+]

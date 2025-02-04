@@ -1,0 +1,166 @@
+[
+    {
+        "id": "dfb55b90856f6000",
+        "type": "udp in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "iface": "",
+        "port": "1202",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "a0715a45e0529073"
+            ]
+        ]
+    },
+    {
+        "id": "a0715a45e0529073",
+        "type": "nvl-receive",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "definition": "VAR_GLOBAL\n\tCount: Int := 0;\nEND_VAR",
+        "listId": "1",
+        "globaltypes": "",
+        "pack": "true",
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "e6cf34b6371231da"
+            ]
+        ]
+    },
+    {
+        "id": "ce8530337e4fc795",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e6cf34b6371231da",
+        "type": "rbe",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "ce8530337e4fc795"
+            ]
+        ]
+    },
+    {
+        "id": "e07958a9f6444650",
+        "type": "nvl-send",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "definition": "VAR_GLOBAL\nOutputVariable: bool;\nEND_VAR",
+        "listId": 0,
+        "globaltypes": "",
+        "pack": "true",
+        "port": "1203",
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "f886dc3a338c4a49"
+            ]
+        ]
+    },
+    {
+        "id": "8ecc60cf24d6d1de",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "True",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"OutputVariable\": true}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "e07958a9f6444650"
+            ]
+        ]
+    },
+    {
+        "id": "f48dfb39f7b1701a",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "False",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"OutputVariable\": false}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "e07958a9f6444650"
+            ]
+        ]
+    },
+    {
+        "id": "f886dc3a338c4a49",
+        "type": "udp out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "addr": "192.168.1.35",
+        "iface": "",
+        "port": "1203",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 490,
+        "y": 340,
+        "wires": []
+    }
+]
